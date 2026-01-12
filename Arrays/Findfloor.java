@@ -1,18 +1,21 @@
 public class Findfloor {
     public static void main(String[] args) {
-        int[]arr={1,2,3,5,7,8,9,10};
-        System.out.println(findFloor(arr,4));
+        char[]arr={'a','b','c','d','e','f','h','l'};
+        System.out.println(findFloor(arr,'g'));
     }
-    static int findFloor(int[]arr,int target){
+    static char findFloor(char[]arr,char target){
         int start=0,end=arr.length-1;
-        int ans = arr[0];
+        char ans = arr[0];
         while (start<=end) {
             int mid =start+(end-start)/2;
-            if(arr[mid]<=target){
+            if(arr[mid]==target){
+                start=mid+1;
+            }
+            if(arr[mid]<target){
                 ans=arr[mid];
                 start=mid+1;
             }
-            else if(arr[mid]>target){
+            else if(arr[mid]>target){   
                 end=mid-1;
             }
         }
