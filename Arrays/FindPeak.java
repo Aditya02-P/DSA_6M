@@ -23,8 +23,8 @@
 public class FindPeak {
     public static void main(String[] args) {
         // Even edge cases like these will now work without crashing
-        // int[] arr = { 1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2 };
-        int[]arr={1,5,2};
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2 };
+        // int[]arr={1,5,2};
         int peak = findPeakIndex(arr);
         System.out.println("Peak index is: " + peak);
     }

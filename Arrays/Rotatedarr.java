@@ -1,8 +1,8 @@
 public class Rotatedarr {
 
     public static void main(String[] args) {
-        int[] arr = { 6, 7, 8, 1, 2, 3, 4, 5 };
-        int target = 7;
+        int[] arr = { 4,6,8,10,1,2 };
+        int target = 10;
         int index = searchInRot(arr, target);
         System.out.println(index);
     }
@@ -13,13 +13,14 @@ public class Rotatedarr {
         while (start < end) {
             int mid = start + (end - start) / 2;
 
-            if (arr[mid] > arr[end]) {
-                start = mid + 1;
-            } else {
+            if (arr[mid] < arr[0]) {
                 end = mid;
+            } else {
+                start = mid + 1;
             }
         }
-
+        System.out.println("THe pivot is at index: " + start);
+        System.out.println("The Minimum element is: " + arr[start]);
         int pivot = start;
 
         if (target >= arr[pivot] && target <= arr[arr.length - 1]) {
