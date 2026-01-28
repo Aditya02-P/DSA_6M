@@ -23,10 +23,10 @@ public class Bookalloc {
             int mid = start + (end - start) / 2;
 
             if (checkAllocation(arr, students, mid)) {
-                ans = mid; // store mid, not end
-                end = mid - 1; // try smaller maximum
+                ans = mid; 
+                end = mid - 1; 
             } else {
-                start = mid + 1; // increase allowed pages
+                start = mid + 1; 
             }
         }
         return ans;
@@ -44,10 +44,10 @@ public class Bookalloc {
                 currentSum = pages;
 
                 if (studentCount > students) {
-                    return false; // allocation not possible
+                    return false; 
                 }
             }
         }
-        return true; // allocation possible
+        return true; 
     }
 }
